@@ -1,4 +1,10 @@
-﻿
+﻿/**------------------------------------------------------------------------------------
+ * This machine learning program was written by Solomon Yaw Adeklo,                   *
+ * A final year computer science student of Valley View University,Ghana.             * 
+ * This software is open sourced and anyone is free to use it for educational purpose * 
+ *----------------------------------------------------------------------------------**/
+
+
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -26,7 +32,7 @@ namespace TransportFarePrediction
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Note: When you click on Predict Transport Fares it takes a few seconds for the system to provide outcome", "Caution");
+            MessageBox.Show("Note: When you click on Predict Transport Fares it takes a few seconds for the system to provide outcome", "Message of Caution from Solomon Yaw Adeklo");
             MLContext mlContext = new MLContext(seed: 0);
             var model = Train(mlContext, _trainDataPath);
             Evaluate(mlContext, model);
