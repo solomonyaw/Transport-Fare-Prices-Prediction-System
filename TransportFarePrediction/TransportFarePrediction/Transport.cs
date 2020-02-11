@@ -82,30 +82,63 @@ namespace TransportFarePrediction
         //This method makes a prediction based on a single input method
         private void TestSinglePrediction(MLContext mlContext, ITransformer model)
         {
-            var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(model);
 
-            //Create a single TaxiTrip object to be used for predictin
-            var taxiTripSample = new TaxiTrip()
+            try
             {
-                vendor_id = "CMT",
-                rate_code = "1",
-                passenger_count = 2,
-                trip_time = 1250,
-                trip_distance = 3.69f,
-                payment_type = "CSH",
-                fare_amount = 0
-            };
-            //Make a prediction
-            var prediction = predictionFunction.Predict(taxiTripSample);
-            
-            
-           MessageBox.Show("Predicted fare is: "+prediction.fare_amount.ToString("c")+" while actual fare is: $15.5","Prediction");
-            lblOutcome.Text = "Predicted fare is: " + prediction.fare_amount.ToString("c") + " while actual fare is: $15.5";
+                var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(model);
+
+                //Create a single TaxiTrip object to be used for predictin
+                var taxiTripSample = new TaxiTrip()
+                {
+                    vendor_id = txtVendorID.Text,
+                    rate_code = txtRateCode.Text,
+                    passenger_count = float.Parse(txtPassengerCount.Text),
+                    trip_time = float.Parse(txtTripTime.Text),
+                    trip_distance = float.Parse(txtTripDistance.Text),
+                    payment_type = txtPaymentType.Text,
+                    fare_amount = float.Parse(txtFareAmount.Text)
+                };
+
+                if (txtPaymentType.Text != "CRD" || txtPaymentType.Text == "CSH")
+                {
+                    MessageBox.Show("Enter the the right payment type to get the right results");
+                }
+
+                if (txtVendorID.Text != "CMT" || txtVendorID.Text == "VTS")
+                {
+                    MessageBox.Show("Enter the the right vendor ID to get the right results");
+                }
+
+
+
+                //Make a prediction
+                var prediction = predictionFunction.Predict(taxiTripSample);
+
+
+                MessageBox.Show("Predicted fare is: " + prediction.fare_amount.ToString("c") + " while actual fare is: $15.5", "Prediction");
+                lblOutcome.Text = "Predicted fare is: " + prediction.fare_amount.ToString("c") + " while actual fare is: $15.5";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("You are not allowed to enter characters in place of decimals");
+
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtVendorID.Text = "";
+             txtRateCode.Text = "";
+            txtPassengerCount.Text = "";
+            txtTripTime.Text = "";
+            txtTripDistance.Text = "";
+            txtPaymentType.Text = "";
+            txtFareAmount.Text = "";
         }
     }
 }
