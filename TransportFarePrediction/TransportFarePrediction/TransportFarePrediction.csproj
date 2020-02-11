@@ -124,7 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TaxiTrip.cs" />
-    <Compile Include="TaxiTripFairPrediction.cs" />
+    <Compile Include="TaxiTripFarePrediction.cs" />
     <Compile Include="Transport.cs">
       <SubType>Form</SubType>
     </Compile>

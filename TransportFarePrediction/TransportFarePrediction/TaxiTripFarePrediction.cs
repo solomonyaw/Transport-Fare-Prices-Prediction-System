@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TransportFarePrediction
 {
-    class TaxiTripFairPrediction
+    class TaxiTripFarePrediction
     {
         [ColumnName("Score")]
         public float fare_amount;

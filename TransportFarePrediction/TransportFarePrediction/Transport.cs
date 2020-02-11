@@ -82,7 +82,7 @@ namespace TransportFarePrediction
         //This method makes a prediction based on a single input method
         private void TestSinglePrediction(MLContext mlContext, ITransformer model)
         {
-            var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFairPrediction>(model);
+            var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(model);
 
             //Create a single TaxiTrip object to be used for predictin
             var taxiTripSample = new TaxiTrip()
