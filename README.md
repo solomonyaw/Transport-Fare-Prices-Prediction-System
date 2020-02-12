@@ -1,12 +1,12 @@
 # Transport Fare Prices Prediction System
  A machine learning model using regression analysis - Built with ML.NET Framework
- 
+ ![alt text](snapshots/code.PNG "Description goes here")
  /**------------------------------------------------------------------------------------
  * This machine learning program was written by Solomon Yaw Adeklo,                   *
  * A final year computer science student of Valley View University,Ghana.             * 
  * This software is open sourced and anyone is free to use it for educational purpose * 
  *----------------------------------------------------------------------------------**/
- 
+ ![alt text](OS.PNG "Description goes here")
  This is a machine learning model for predicting the price of transport fair using regression analysis algorithm.The system was trained with some dataset which have been labeled for supervised learning.  
  
 # Dataset
@@ -28,8 +28,10 @@ fare_amount: The total taxi fare paid is the label to be predicted
 Two classes were created, one class to hold features and the other class to hold the prediction
 
 Below is the code for the TaxiTrip Class
+![alt text](TaxiTripClass.PNG "Description goes here")
 
 Below is the code for the TransportFarePrediction Class
+![alt text](TransportFarePredictionClass.PNG "Description goes here")
 
 # Functions
 There were three functions that were deployed. The are:
@@ -42,3 +44,8 @@ Finally the TestSinglePrediction() method makes a prediction based on a single i
 
 
 # Below are the snapshots of the program
+![alt text](snapshots.PNG "Description goes here")
+
+![alt text](snapshots1.PNG "Description goes here")
+
+![alt text](snapshots2.PNG "Description goes here")
