@@ -18,7 +18,7 @@ trip_distance: The distance of the trip.
 payment_type: The payment method  – either credit card or cash
 fare_amount: The total taxi fare paid is the label to be predicted
 
-#Classes
+# Classes
 Two classes were created, one class to hold features and the other class to hold the prediction
 
 Below is the code for the TaxiTrip Class
