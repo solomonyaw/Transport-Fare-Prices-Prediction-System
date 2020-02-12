@@ -1,7 +1,7 @@
 # Transport Fare Prices Prediction System
  A machine learning model using regression analysis - Built with ML.NET Framework
  
- This is a machine learning model for predicting the price of transport fair using regression analysis.The system was trained with some dataset which have been labeled for supervised learning.  
+ This is a machine learning model for predicting the price of transport fair using regression analysis algorithm.The system was trained with some dataset which have been labeled for supervised learning.  
  
 # Dataset
 The data contains in the data fields contain the following fields:
