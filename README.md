@@ -5,9 +5,7 @@
 # Dataset
 The data contains in the data fields contain the following fields:
 
-<div class="text-red mb-2">
-  vendor_id: Unique ID of the taxi vendor.
-</div> 
+  vendor_id: Unique ID of the taxi vendor.</br>
 rate_code: rate type of the taxi trip.
 passenger_count: number of passengers for the trip.
 trip_time_in_secs: The amount of time the trip took. You need to predict the fare before the trip is completed. So at that moment you don’t know how long the trip would take. Therefore, the trip time is not a feature and you’ll exclude this column from the model.
