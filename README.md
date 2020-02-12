@@ -36,7 +36,7 @@ Below is the code for the TransportFarePrediction Class
 ![alt text](TransportFarePredictionClass.PNG "Description goes here")
 
 # Functions
-There were three functions that were deployed. The are:
+There were three functions that were deployed. They are:
 
 The Train() function which The Train() function is a function that build and trains the model by executing the following:
 
