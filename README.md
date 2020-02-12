@@ -1,6 +1,12 @@
 # Transport Fare Prices Prediction System
  A machine learning model using regression analysis - Built with ML.NET Framework
  
+ /**------------------------------------------------------------------------------------
+ * This machine learning program was written by Solomon Yaw Adeklo,                   *
+ * A final year computer science student of Valley View University,Ghana.             * 
+ * This software is open sourced and anyone is free to use it for educational purpose * 
+ *----------------------------------------------------------------------------------**/
+ 
  This is a machine learning model for predicting the price of transport fair using regression analysis algorithm.The system was trained with some dataset which have been labeled for supervised learning.  
  
 # Dataset
