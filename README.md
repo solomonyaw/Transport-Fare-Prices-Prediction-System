@@ -12,7 +12,7 @@
  This is a machine learning model for predicting the price of transport fair using regression analysis algorithm.The system was trained with some dataset which have been labeled for supervised learning.  
  
 # Dataset
-The data contains in the data fields contain the following fields:
+The data in the data fields contain the following fields:
 
   vendor_id: Unique ID of the taxi vendor.
   
