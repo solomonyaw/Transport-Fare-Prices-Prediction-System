@@ -38,7 +38,7 @@ Below is the code for the TransportFarePrediction Class
 # Functions
 There were three functions that were deployed. They are:
 
-The Train() function which The Train() function is a function that build and trains the model by executing the following:
+The Train() function which The Train() function is a function that build and trains the model.
 
 The Evaluate() function is used to assess the model’s performance. Accuracy for  example.
 
