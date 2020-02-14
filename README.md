@@ -38,8 +38,13 @@ Below is the code for the TransportFarePrediction Class
 # Functions
 There were three functions that were deployed. They are:
 
-The Train() function which The Train() function is a function that build and trains the model.
-
+The Train() function which The Train() function is a function that build and trains the model by executing the following:
+  1) load the data from disk into memory 
+  2) extract the data and perform some transformation
+  3) train the model 
+  4) finally return the trained model
+      The train function returns an model/ITransformer object. 
+      
 The Evaluate() function is used to assess the model’s performance. Accuracy for  example.
 
 Finally the TestSinglePrediction() method makes a prediction based on a single input record
