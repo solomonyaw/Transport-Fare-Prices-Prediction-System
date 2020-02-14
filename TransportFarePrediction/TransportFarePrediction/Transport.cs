@@ -93,7 +93,7 @@ namespace TransportFarePrediction
             {
                 var predictionFunction = mlContext.Model.CreatePredictionEngine<TaxiTrip, TaxiTripFarePrediction>(model);
 
-                //Create a single TaxiTrip object to be used for predictin
+                //Create a single TaxiTrip object to be used for prediction
                 var taxiTripSample = new TaxiTrip()
                 {
                     vendor_id = txtVendorID.Text,
@@ -105,12 +105,12 @@ namespace TransportFarePrediction
                     fare_amount = float.Parse(txtFareAmount.Text)
                 };
 
-                if (txtPaymentType.Text != "CRD" || txtPaymentType.Text == "CSH")
+                if (txtPaymentType.Text != "CRD" && txtPaymentType.Text != "CSH")
                 {
                     MessageBox.Show("Enter the the right payment type to get the right results");
                 }
 
-                if (txtVendorID.Text != "CMT" || txtVendorID.Text == "VTS")
+                if (txtVendorID.Text != "CMT" && txtVendorID.Text != "VTS")
                 {
                     MessageBox.Show("Enter the the right vendor ID to get the right results");
                 }
@@ -124,9 +124,9 @@ namespace TransportFarePrediction
                 MessageBox.Show("Predicted fare is: " + prediction.fare_amount.ToString("c") + " while actual fare is: $15.5", "Prediction");
                 lblOutcome.Text = "Predicted fare is: " + prediction.fare_amount.ToString("c") + " while actual fare is: $15.5";
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                MessageBox.Show("You are not allowed to enter characters in place of decimals");
+                MessageBox.Show("You are not allowed to enter ampty strings and characters in place of decimals");
 
             }
         }
